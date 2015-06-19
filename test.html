@@ -1,0 +1,23 @@
+
+<script type="text/javascript">
+fs.root.getDirectory('Documents', {}, function(dirEntry){
+  var dirReader = dirEntry.createReader();
+  alert (dirReader);}
+  /*
+  dirReader.readEntries(function(entries) {
+    /*for(var i = 0; i < entries.length; i++) {
+      var entry = entries[i];
+      if (entry.isDirectory){
+        console.log('Directory: ' + entry.fullPath);
+      }
+      else if (entry.isFile){
+        console.log('File: ' + entry.fullPath);
+      }
+    }
+
+  }, errorHandler);
+}, errorHandler);
+*/
+
+</script>
+

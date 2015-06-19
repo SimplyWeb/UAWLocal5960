@@ -1,10 +1,5 @@
 <html>
-    <head>
-        <script type="text/javascript">
-            if(sessionStorage.getItem("location")===null){
-                sessionStorage.setItem("location","home");
-            }        
-        </script>
+    <head>        
         <title>UAW Local 5960</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,6 +28,16 @@
     </head>
     <body>
         <script type="text/javascript">
+            if(sessionStorage.getItem("location")===null){
+                sessionStorage.setItem("location","home");
+            }  
+            function newPage(value){
+               sessionStorage.setItem("location",value);
+               //alert(sessionStorage.getItem("location"));
+               screenUpdate();        
+            }
+        </script>
+        <script type="text/javascript">
             var getImport = document.querySelector('link[id=navbar]');
             var getDoc = getImport.import;
             document.write(getDoc.getElementsByClassName("navbar-dynamic")[0].innerHTML);
@@ -46,14 +51,6 @@
                 document.getElementById("initialPage").innerHTML= buildPage();
             </script>
         </div>
-        <script type="text/javascript">
-            function newPage(value){
-               sessionStorage.setItem("location",value);
-               //alert(sessionStorage.getItem("location"));
-               screenUpdate();
-        
-            }
-        </script>
     </body>
 </html>
   
